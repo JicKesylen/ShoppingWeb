@@ -1,0 +1,10 @@
+{
+    "mode": "history",
+    "routes": [
+        {
+            "path": "/",
+            "name": "Home",
+            "component": "components/Home.vue"
+        }
+    ]
+}
