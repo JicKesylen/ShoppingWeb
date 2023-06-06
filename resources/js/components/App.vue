@@ -30,7 +30,6 @@ export default {
         window.loading = (isShow = true) => {
             this.ShowLoading = isShow;
         };
-        
     },
     data() {
         return {

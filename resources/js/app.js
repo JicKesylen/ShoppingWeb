@@ -12,10 +12,10 @@ import 'view-design/dist/styles/iview.css';
 //import VueAxios from 'vue-axios'
 import './script/Common.js';
 //import store from './store';
-import 'bootstrap';
 import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import '../../public/css/bootstrap.min.css'
+import '../../public/fonts/font-awesome.min.css'
+import 'animate.css';
 import jQuery from 'jquery'
 
 window.$ = window.jQuery = jQuery
