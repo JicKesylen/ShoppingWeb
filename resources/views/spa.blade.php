@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>疾病百科</title>
+        <title>購物網站</title>
     </head>
     <body>
         <div id="app">

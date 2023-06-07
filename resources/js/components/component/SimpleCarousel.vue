@@ -1,15 +1,12 @@
 <template>
-    <div style="text-align: center;">
+    <div style="text-align: center;position: relative;">
+        <button class="btn previous" @click="show -= 1"><i class="fa fa-angle-double-left"></i></button>
+        <button class="btn next" @click="show += 1"><i class="fa fa-angle-double-right"></i></button>
         <transition-group tag="div" class="TransitionBox" :name="transitionName">
             <div class="page" v-for="(img, index) of imgs" :key="index" v-show="index === show">
-                <img :src="img" class="dishimg" @mouseover="handleMouseOver" @mouseout="handleMouseLeave"> 
+                <img :src="img" class="dishimg" @mouseover="handleMouseOver" @mouseout="handleMouseLeave">
             </div>
         </transition-group>
-        <span class="btnsapn">
-            <button class="btn btn-one" @click="setshow(show-1)"><i class="fa fa-angle-double-left"></i></button>
-            <button class="btn btn-one" v-for="num of imgs.length" :key="num-1" @click="setshow(num-1)">{{num}}</button>
-            <button class="btn btn-one" @click="setshow(show+1)"><i class="fa fa-angle-double-right"></i></button>
-        </span>
     </div>
 </template>
 
@@ -41,9 +38,6 @@ export default {
         // timer = setInterval (this.nextShow, interval)
     },
     methods: {
-        setshow (index) {
-            this.show = index
-        },
         nextShow () {
             this.show++
         },
@@ -120,41 +114,27 @@ export default {
         height: 400px;
     }
     /* btn */
-    .btnsapn{
-        text-align: center;
-        width: 320px;
-        height: 33%;
-        margin: 0 auto;
-    }
     .btn {
-        position: relative;
-        color: #a385bb;
-        border: 1px solid rgba(255, 255, 255);
-        width: 45px;
-        height: 30px;
-        transition: all 0.3s;
-        font-size: 15px;
-        font-weight: 550;
-    }
-    .btn::before, .btn::after {
-        content: '';
-        position: absolute;
-        transition: all 0.3s;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         z-index: 1;
+        border: none;
+        position: absolute;
+        color: black;
+        max-width: 50px;
+        max-height: 50px;
+        text-align: center;
+        display: flex;
+        justify-content: center;    
+        align-content: center;
+        font-size: xx-large;
     }
-    .btn-one::before {
-        opacity: 0;
-        background: rgba(0, 0, 0, 0.1);
-        transform: scale(0.1, 0.1);
+    .btn:hover {
+        color: white;
     }
-
-    .btn-one:hover::before {
-        opacity: 1;
-        transform: scale(1, 1);
+    .previous {
+        transform: translateY(170px);
     }
-
+    .next {
+        right: 0;
+        transform: translateY(170px);
+    }
 </style>

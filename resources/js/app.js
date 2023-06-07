@@ -8,10 +8,8 @@ import router from './router';
 import Vue from 'vue';
 import ViewUI from 'view-design';
 import 'view-design/dist/styles/iview.css';
-//import axios from "axios";
-//import VueAxios from 'vue-axios'
 import './script/Common.js';
-//import store from './store';
+import './bootstrap';
 import BootstrapVue from 'bootstrap-vue'
 import '../../public/css/bootstrap.min.css'
 import '../../public/fonts/font-awesome.min.css'
@@ -37,6 +35,7 @@ window.$ = window.jQuery = jQuery
 
 const files = require.context('./', true, /\.vue$/i)
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+
 Vue.use(ViewUI);
 Vue.use(BootstrapVue)
 //Vue.use(VueAxios,axios);

@@ -1,274 +1,85 @@
 <template>
     <div>
         <nav class="navbar navbar-dark navbar-expand-md sticky-top py-3" id="mainNav">
-            <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="/">
+                    <span class="bs-icon-sm bs-icon-circle bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
                             <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"></path>
                             <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
-                        </svg></span><span>Brand</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                        </svg>
+                    </span>
+                    <span>Brand</span>
+                </a>
+                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+                    <span class="visually-hidden">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item dropdown menu_links"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" style="margin-right: 10px;"><strong><span style="color: rgba(255, 255, 255, 0.75);">Productos</span></strong></a>
-                            <div class="dropdown-menu"><a class="dropdown-item" href="#">Albercas Estructurales</a><a class="dropdown-item" href="#">Albercas Inflables<br></a><a class="dropdown-item" href="#">Bombas</a></div>
+                        <li class="nav-item dropdown menu_links">
+                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" style="margin-right: 10px;">
+                                <strong>
+                                    <span style="color: rgba(255, 255, 255, 0.75);">Productos</span>
+                                </strong>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Albercas Estructurales</a>
+                                <a class="dropdown-item" href="#">Albercas Inflables<br></a>
+                                <a class="dropdown-item" href="#">Bombas</a>
+                            </div>
                         </li>
-                        <li class="nav-item dropdown menu_links"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" style="margin-right: 10px;"><strong><span style="color: rgba(255, 255, 255, 0.75);">Productos</span></strong></a>
-                            <div class="dropdown-menu"><a class="dropdown-item" href="#">Albercas Estructurales</a><a class="dropdown-item" href="#">Albercas Inflables<br></a><a class="dropdown-item" href="#">Bombas</a></div>
+                        <li class="nav-item dropdown menu_links">
+                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" style="margin-right: 10px;">
+                                <strong>
+                                    <span style="color: rgba(255, 255, 255, 0.75);">Productos</span>
+                                </strong>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Albercas Estructurales</a>
+                                <a class="dropdown-item" href="#">Albercas Inflables<br></a>
+                                <a class="dropdown-item" href="#">Bombas</a>
+                            </div>
                         </li>
-                        <li class="nav-item dropdown menu_links"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" style="margin-right: 10px;"><strong><span style="color: rgba(255, 255, 255, 0.75);">Productos</span></strong></a>
-                            <div class="dropdown-menu"><a class="dropdown-item" href="#">Albercas Estructurales</a><a class="dropdown-item" href="#">Albercas Inflables<br></a><a class="dropdown-item" href="#">Bombas</a></div>
+                        <li class="nav-item dropdown menu_links">
+                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" style="margin-right: 10px;">
+                                <strong>
+                                    <span style="color: rgba(255, 255, 255, 0.75);">Productos</span>
+                                </strong>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Albercas Estructurales</a>
+                                <a class="dropdown-item" href="#">Albercas Inflables<br></a>
+                                <a class="dropdown-item" href="#">Bombas</a>
+                            </div>
                         </li>
-                        <li class="nav-item dropdown menu_links"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" style="margin-right: 10px;"><strong><span style="color: rgba(255, 255, 255, 0.75);">Productos</span></strong></a>
-                            <div class="dropdown-menu"><a class="dropdown-item" href="#">Albercas Estructurales</a><a class="dropdown-item" href="#">Albercas Inflables<br></a><a class="dropdown-item" href="#">Bombas</a></div>
+                        <li class="nav-item dropdown menu_links">
+                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" style="margin-right: 10px;">
+                                <strong><span style="color: rgba(255, 255, 255, 0.75);">Productos</span>
+                                </strong>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Albercas Estructurales</a>
+                                <a class="dropdown-item" href="#">Albercas Inflables<br></a>
+                                <a class="dropdown-item" href="#">Bombas</a>
+                            </div>
                         </li>
-                    </ul><a class="btn btn-primary shadow" role="button" href="signup.html">Sign up</a>
+                    </ul>
+                    <a class="btn btn-primary shadow" role="button" href="signup.html">Sign up</a>
                 </div>
             </div>
         </nav>
-
+        <!-- 輪播圖 -->
         <SimpleCarousel :imgs="imgs" style="width: 100%;"></SimpleCarousel>
-
+        <!-- 品牌故事 -->
         <section class="py-5" style="margin: 1px;">
             <div class="container text-center py-5" style="height: 300px;">
                 <p class="mb-4" style="font-size: 1.6rem;padding: 10px;text-align: justify;"><span style="background-color: rgb(45, 44, 56);">在這裡，我們相信每個人都應該享受到方便、有趣和豐富的線上購物體驗。我們的品牌故事始於對創新科技和時尚的熱愛。我們的團隊致力於精心挑選最新的潮流商品，從時尚服飾到家居用品，為客戶提供獨特和優質的選擇。我們追求卓越的品質和卓越的客戶服務，並不斷努力超越期望。無論您身在何處，透過這裡，您都能輕鬆尋找到您喜愛的商品，享受到便捷的購物體驗。</span></p>
             </div>
         </section>
-        <section><div class="container">
-        <div class="row">
-            <img style="width: 100%;height: 150px;" />
-            <h2>Ecommerce Products Display Layout</h2>
-            <p>
-                This snippent uses <a href="http://daneden.github.io/animate.css/" target="_blank">Animate.css</a> for the animation of the buttons.
-            </p>
-            <div class="col-sm-3">
-                <article class="col-item">
-                    <div class="photo">
-                        <div class="options-cart-round">
-                            <button class="btn btn-default" title="Add to cart">
-                                <span class="fa fa-shopping-cart"></span>
-                            </button>
-                        </div>
-                        <a href="#"> <img src="https://unsplash.it/500/300?image=0" class="img-responsive" alt="Product Image" /> </a>
-                    </div>
-                    <div class="info">
-                        <div class="row">
-                            <div class="price-details col-md-6">
-                                <p class="details">
-                                    Lorem ipsum dolor sit amet, consectetur..
-                                </p>
-                                <h1>Sample Product</h1>
-                                <span class="price-new">$110.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <p class="text-center">Hover over image</p>
-            </div>
-            <div class="col-sm-3">
-                <article class="col-item">
-                    <div class="photo">
-                        <div class="options">
-                            <button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="Add to wish list">
-                                <i class="fa fa-heart"></i>
-                            </button>
-                            <button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="Compare">
-                                <i class="fa fa-exchange"></i>
-                            </button>
-                        </div>
-                        <div class="options-cart">
-                            <button class="btn btn-default" title="Add to cart">
-                                <span class="fa fa-shopping-cart"></span>
-                            </button>
-                        </div>
-                        <a href="#"> <img src="https://unsplash.it/500/300?image=0" class="img-responsive" alt="Product Image" /> </a>
-                    </div>
-                    <div class="info">
-                        <div class="row">
-                            <div class="price-details col-md-6">
-                                <p class="details">
-                                    Lorem ipsum dolor sit amet, consectetur..
-                                </p>
-                                <h1>Sample Product</h1>
-                                <span class="price-new">$110.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <p class="text-center">Hover over image</p>
-            </div>
-            <div class="col-sm-3">
-                <article class="col-item">
-                    <div class="options">
-                        <button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="Add to wish list">
-                            <i class="fa fa-heart"></i>
-                        </button>
-                        <button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="Compare">
-                            <i class="fa fa-exchange"></i>
-                        </button>
-                    </div>
-                    <div class="photo">
-                        <a href="#"> <img src="https://unsplash.it/500/300?image=0" class="img-responsive" alt="Product Image" /> </a>
-                    </div>
-                    <div class="info">
-                        <div class="row">
-                            <div class="price-details col-md-6">
-                                <p class="details">
-                                    Lorem ipsum dolor sit amet, consectetur..
-                                </p>
-                                <h1>Sample Product</h1>
-                                <span class="price-new">$110.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-sm-3">
-                <article class="col-item">
-                    <div class="photo">
-                        <a href="#"> <img src="https://unsplash.it/500/300?image=0" class="img-responsive" alt="Product Image" /> </a>
-                    </div>
-                    <div class="info">
-                        <div class="row">
-                            <div class="price-details col-md-6">
-                                <p class="details">
-                                    Lorem ipsum dolor sit amet, consectetur..
-                                </p>
-                                <h1>Sample Product</h1>
-                                <span class="price-new">$110.00</span>
-                            </div>
-                        </div>
-                        <div class="separator clear-left">
-                            <p class="btn-add">
-                                <i class="fa fa-shopping-cart"></i><a href="#" class="hidden-sm">Add to cart</a>
-                            </p>
-                            <p class="btn-details">
-                                <a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart"></i></a>
-                                <a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a>
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </div></section>
-        <section><div class="container">
-        <div class="row">
-            <img style="width: 100%;height: 150px;" />
-            <h2>Ecommerce Products Display Layout</h2>
-            <p>
-                This snippent uses <a href="http://daneden.github.io/animate.css/" target="_blank">Animate.css</a> for the animation of the buttons.
-            </p>
-            <div class="col-sm-3">
-                <article class="col-item">
-                    <div class="photo">
-                        <div class="options-cart-round">
-                            <button class="btn btn-default" title="Add to cart">
-                                <span class="fa fa-shopping-cart"></span>
-                            </button>
-                        </div>
-                        <a href="#"> <img src="https://unsplash.it/500/300?image=0" class="img-responsive" alt="Product Image" /> </a>
-                    </div>
-                    <div class="info">
-                        <div class="row">
-                            <div class="price-details col-md-6">
-                                <p class="details">
-                                    Lorem ipsum dolor sit amet, consectetur..
-                                </p>
-                                <h1>Sample Product</h1>
-                                <span class="price-new">$110.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <p class="text-center">Hover over image</p>
-            </div>
-            <div class="col-sm-3">
-                <article class="col-item">
-                    <div class="photo">
-                        <div class="options">
-                            <button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="Add to wish list">
-                                <i class="fa fa-heart"></i>
-                            </button>
-                            <button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="Compare">
-                                <i class="fa fa-exchange"></i>
-                            </button>
-                        </div>
-                        <div class="options-cart">
-                            <button class="btn btn-default" title="Add to cart">
-                                <span class="fa fa-shopping-cart"></span>
-                            </button>
-                        </div>
-                        <a href="#"> <img src="https://unsplash.it/500/300?image=0" class="img-responsive" alt="Product Image" /> </a>
-                    </div>
-                    <div class="info">
-                        <div class="row">
-                            <div class="price-details col-md-6">
-                                <p class="details">
-                                    Lorem ipsum dolor sit amet, consectetur..
-                                </p>
-                                <h1>Sample Product</h1>
-                                <span class="price-new">$110.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <p class="text-center">Hover over image</p>
-            </div>
-            <div class="col-sm-3">
-                <article class="col-item">
-                    <div class="options">
-                        <button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="Add to wish list">
-                            <i class="fa fa-heart"></i>
-                        </button>
-                        <button class="btn btn-default" type="submit" data-toggle="tooltip" data-placement="top" title="Compare">
-                            <i class="fa fa-exchange"></i>
-                        </button>
-                    </div>
-                    <div class="photo">
-                        <a href="#"> <img src="https://unsplash.it/500/300?image=0" class="img-responsive" alt="Product Image" /> </a>
-                    </div>
-                    <div class="info">
-                        <div class="row">
-                            <div class="price-details col-md-6">
-                                <p class="details">
-                                    Lorem ipsum dolor sit amet, consectetur..
-                                </p>
-                                <h1>Sample Product</h1>
-                                <span class="price-new">$110.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-sm-3">
-                <article class="col-item">
-                    <div class="photo">
-                        <a href="#"> <img src="https://unsplash.it/500/300?image=0" class="img-responsive" alt="Product Image" /> </a>
-                    </div>
-                    <div class="info">
-                        <div class="row">
-                            <div class="price-details col-md-6">
-                                <p class="details">
-                                    Lorem ipsum dolor sit amet, consectetur..
-                                </p>
-                                <h1>Sample Product</h1>
-                                <span class="price-new">$110.00</span>
-                            </div>
-                        </div>
-                        <div class="separator clear-left">
-                            <p class="btn-add">
-                                <i class="fa fa-shopping-cart"></i><a href="#" class="hidden-sm">Add to cart</a>
-                            </p>
-                            <p class="btn-details">
-                                <a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart"></i></a>
-                                <a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a>
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </div></section>
+        
+        <ProductItemCard></ProductItemCard>
+
         <footer class="bg-dark">
             <div class="container py-4 py-lg-5">
                 <div class="row justify-content-center">
@@ -352,7 +163,7 @@ import ADImageApiHelper from '../script/Utility/ADImgaeApiHelper';
     }
 </script>
 
-<style src="../../css/home/swiper-icons.css" scoped></style>
-<style src="../../css/home/MUSA_product-display.css" scoped></style>
-<style src="../../css/home/Navbar-Dropdown-List-Item.css" scoped></style>
-<style src="../../css/home/s-product-catalog.css" scoped></style>
+
+<!-- <style>
+    @import "../../assets/css/MUSA_product-display.css";
+</style> -->
