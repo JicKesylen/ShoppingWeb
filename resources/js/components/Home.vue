@@ -11,57 +11,17 @@
                     </span>
                     <span>Brand</span>
                 </a>
-                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
-                    <span class="visually-hidden">Toggle navigation</span>
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <!-- navbar選項 -->
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item dropdown menu_links">
+                        <li class="nav-item dropdown menu_links" v-for="(item, key) in ProductData" :key="key">
                             <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" style="margin-right: 10px;">
                                 <strong>
-                                    <span style="color: rgba(255, 255, 255, 0.75);">Productos</span>
+                                    <span style="color: rgba(255, 255, 255, 0.75);">{{ key }}</span>
                                 </strong>
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Albercas Estructurales</a>
-                                <a class="dropdown-item" href="#">Albercas Inflables<br></a>
-                                <a class="dropdown-item" href="#">Bombas</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown menu_links">
-                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" style="margin-right: 10px;">
-                                <strong>
-                                    <span style="color: rgba(255, 255, 255, 0.75);">Productos</span>
-                                </strong>
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Albercas Estructurales</a>
-                                <a class="dropdown-item" href="#">Albercas Inflables<br></a>
-                                <a class="dropdown-item" href="#">Bombas</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown menu_links">
-                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" style="margin-right: 10px;">
-                                <strong>
-                                    <span style="color: rgba(255, 255, 255, 0.75);">Productos</span>
-                                </strong>
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Albercas Estructurales</a>
-                                <a class="dropdown-item" href="#">Albercas Inflables<br></a>
-                                <a class="dropdown-item" href="#">Bombas</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown menu_links">
-                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" style="margin-right: 10px;">
-                                <strong><span style="color: rgba(255, 255, 255, 0.75);">Productos</span>
-                                </strong>
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Albercas Estructurales</a>
-                                <a class="dropdown-item" href="#">Albercas Inflables<br></a>
-                                <a class="dropdown-item" href="#">Bombas</a>
+                                <a class="dropdown-item" href="#" v-for="(value, index) in item" :key="index">{{ value }}</a>
                             </div>
                         </li>
                     </ul>
@@ -85,6 +45,7 @@
                     :src="value.ImageUrl"
                     :name="value.Name"
                     :price="value.Price"
+                    :id="`${value.ProductID}`"
                 >
                     {{ value.ImageURL }}
                 </ProductItemCard>
@@ -153,6 +114,7 @@ import ProductApiHelper from '../script/Utility/ProductApiHelper';
             return {
                 imgs: [],
                 ProductInformation: [],
+                ProductData: "",
             }
         },
         methods: {
@@ -171,6 +133,29 @@ import ProductApiHelper from '../script/Utility/ProductApiHelper';
             });
             ProductApiHelper.GetProduct().then(($response) => {
                 this.ProductInformation = $response.data;
+                const ProductData = $response.data.map(obj => {
+                    return {
+                        Class: obj.Class,
+                        Name: obj.Name,
+                        ProductID: obj.ProductID
+                    };
+                });
+                const mergedObject = {};
+                ProductData.forEach(jsonObject => {
+                    const { Class, Name } = jsonObject;
+                    if(!mergedObject[Class]) {
+                        mergedObject[Class] = [Name];
+                    } else {
+                        mergedObject[Class].push(Name)
+                    }
+                });
+                const mergedArray = Object.entries(mergedObject).map(([Class, values]) => ({
+                    Class,
+                    ...values
+                }));
+
+                this.ProductData = mergedObject;
+                log(mergedArray);
             })
             .catch((error) => {
                 loading(false);
