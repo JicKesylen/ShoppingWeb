@@ -11,6 +11,6 @@ class ADImageController extends Controller
 {
     public function GetADImage() {
         $ImageUrl = adimage::pluck('ImageURL') -> all();
-        return (new ApiResponse(true, "", 0, 200, $ImageUrl))->toJson();
+        return (new ApiResponse(true, "", 0, 200, $ImageUrl)) -> toJson();
     }
 }

@@ -3,9 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ADImageController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\UserProFileController;
-use App\Http\Controllers\FaceShapeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +17,5 @@ use App\Http\Controllers\FaceShapeController;
 |
 */
 
-Route::middleware('api')->post('/GetADImage', [ADImageController::class , 'GetADImage']);
+Route::middleware('api')->post('/GetADImage', [ADImageController::class, 'GetADImage']);
+Route::middleware('api')->post('/GetProduct', [ProductController::class, 'GetProduct']);

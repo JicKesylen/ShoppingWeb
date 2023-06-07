@@ -77,9 +77,19 @@
                 <p class="mb-4" style="font-size: 1.6rem;padding: 10px;text-align: justify;"><span style="background-color: rgb(45, 44, 56);">在這裡，我們相信每個人都應該享受到方便、有趣和豐富的線上購物體驗。我們的品牌故事始於對創新科技和時尚的熱愛。我們的團隊致力於精心挑選最新的潮流商品，從時尚服飾到家居用品，為客戶提供獨特和優質的選擇。我們追求卓越的品質和卓越的客戶服務，並不斷努力超越期望。無論您身在何處，透過這裡，您都能輕鬆尋找到您喜愛的商品，享受到便捷的購物體驗。</span></p>
             </div>
         </section>
-        
-        <ProductItemCard></ProductItemCard>
-
+        <div class="container">
+            <div class="row">
+                <ProductItemCard
+                    v-for="(value, key) in ProductInformation"
+                    :key="key"
+                    :src="value.ImageUrl"
+                    :name="value.Name"
+                    :price="value.Price"
+                >
+                    {{ value.ImageURL }}
+                </ProductItemCard>
+            </div>
+        </div>
         <footer class="bg-dark">
             <div class="container py-4 py-lg-5">
                 <div class="row justify-content-center">
@@ -137,11 +147,12 @@
 
 <script>
 import ADImageApiHelper from '../script/Utility/ADImgaeApiHelper';
-
+import ProductApiHelper from '../script/Utility/ProductApiHelper';
     export default {
         data() {
             return {
-                imgs: []
+                imgs: [],
+                ProductInformation: [],
             }
         },
         methods: {
@@ -153,7 +164,13 @@ import ADImageApiHelper from '../script/Utility/ADImgaeApiHelper';
                 if($response.success) {
                     this.imgs = $response.data;
                 }
-                log($response.data)
+            })
+            .catch((error) => {
+                loading(false);
+                alert(error.message);
+            });
+            ProductApiHelper.GetProduct().then(($response) => {
+                this.ProductInformation = $response.data;
             })
             .catch((error) => {
                 loading(false);

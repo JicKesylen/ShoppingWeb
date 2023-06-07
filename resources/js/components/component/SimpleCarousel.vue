@@ -32,10 +32,9 @@ export default {
         const interval = 5000;
         this.timer = setInterval(() => {
             if (!this.isPaused) {
-            this.nextShow();
+                this.nextShow();
             }
         }, interval);
-        // timer = setInterval (this.nextShow, interval)
     },
     methods: {
         nextShow () {

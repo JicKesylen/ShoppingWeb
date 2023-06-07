@@ -10,7 +10,5 @@ class adimage extends Model
     use HasFactory;
     protected $table = 'adimage';
     public $timestamps = false;
-    protected $fillable = [
-        'ImageURL' => 'text',
-    ];
+    
 }

@@ -1,40 +1,34 @@
 <template>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <article class="col-item">
-                        <div class="photo" @mouseover="isShowInfo = true;" @mouseleave="isShowInfo = false">
-                            <a href="#">
-                                <img :src="src" class="image" alt="Product Image">
-                            </a>
-                        </div>
-                        <div style="position: relative;width: 100%;height: 84px;transform: translateY(-100%);" @mouseover="isShowInfo = true;" @mouseleave="isShowInfo = false">
-                            <transition name="ProductInformation">
-                                <div class="info" v-show="isShowInfo">
-                                    <div class="row">
-                                        <div class="price-details col-md-6">
-                                            <h1 style="font-size: large;">{{ cardtext }}</h1>
-                                            <span class="price-new">${{price}}</span>
-                                        </div>
-                                    </div>
-                                    <div class="separator clear-left">
-                                        <p class="btn-add">
-                                            <i class="fa fa-shopping-cart"></i><a href="#" class="hidden-sm">Add to cart</a>
-                                        </p>
-                                        <p class="btn-details">
-                                            <a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart"></i></a>
-                                            <a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </transition>
-                        </div>
-                    </article>
-                </div>
+    <div class="col-md-4">
+        <article class="col-item">
+            <div class="photo" @mouseover="isShowInfo = true;" @mouseleave="isShowInfo = false">
+                <a href="#">
+                    <img :src="src" class="image" alt="Product Image">
+                </a>
             </div>
-        </div>
-    </section>
+            <div style="position: relative;width: 100%;height: 84px;transform: translateY(-100%);" @mouseover="isShowInfo = true;" @mouseleave="isShowInfo = false">
+                <transition name="ProductInformation">
+                    <div class="info" v-show="isShowInfo">
+                        <div class="row">
+                            <div class="price-details col-md-6">
+                                <h1 style="font-size: large;">{{ name }}</h1>
+                                <span class="price-new">${{price}}</span>
+                            </div>
+                        </div>
+                        <div class="separator clear-left">
+                            <p class="btn-add">
+                                <i class="fa fa-shopping-cart"></i><a href="#" class="hidden-sm">Add to cart</a>
+                            </p>
+                            <p class="btn-details">
+                                <a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Add to wish list"><i class="fa fa-heart"></i></a>
+                                <a href="#" class="hidden-sm" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-exchange"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </transition>
+            </div>
+        </article>
+    </div>
 </template>
 
 <script>
@@ -48,7 +42,7 @@ export default {
             type: Number,
             default: 100,
         },
-        cardtext: {
+        name: {
             type: String,
             default: "This is Example Product.",
         },
@@ -62,8 +56,7 @@ export default {
             isShowInfo: false,
         }
     },
-    methods: {
-    },
+    methods: {},
 }
 </script>
 
@@ -74,10 +67,12 @@ export default {
     }
     .col-item .photo {
         overflow: hidden;
+        height: 500px;
     }
     .col-item .photo img {
         margin: 0 auto;
         width: 100%;
+        height: 100%;
     }
     .col-item .info {
         width: 100%;
