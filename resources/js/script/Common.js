@@ -1,9 +1,11 @@
 const md5 = require('md5');
 const common = {
     log(text) {
-        console.debug(text);
+        if (process.env.MIX_APP_DEBUG == "true") {
+            console.debug(text);
+        }
     },
-
+    
     md5(s) {
         return md5(`fore${s}see`);
     },

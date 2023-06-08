@@ -4,11 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Log;
 
-class Product extends Model
+class User extends Model
 {
     use HasFactory;
-    protected $table = 'product';
+    protected $table = 'user';
     protected $dateFormat = 'Y-m-d H:i:s';
 }

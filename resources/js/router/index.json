@@ -5,6 +5,16 @@
             "path": "/",
             "name": "Home",
             "component": "components/Home.vue"
+        },
+        {
+            "path": "/SignUp",
+            "name": "SignUp",
+            "component": "components/SignUp.vue"
+        },
+        {
+            "path": "/*",
+            "name": "Errorpath",
+            "component": "components/404/NotFound.vue"
         }
     ]
 }

@@ -9,7 +9,7 @@
         </Row>
         <Modal v-model="dialog.show" :closable="false" :mask-closable="false">
             <pre
-                style="text-align: left; white-space: pre-wrap; word-wrap: break-word"
+                style="text-align: left; white-space: pre-wrap; word-wrap: break-word; color: black; font-size: x-large;"
                 v-html="dialog.content"
             ></pre>
             <div slot="footer">
